@@ -1,0 +1,123 @@
+
+
+*{margin :0 ;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+
+}
+.body {
+    padding-top: 2%;
+
+    display : flex ; 
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(255,255,255);
+}
+.box{
+    padding-top: 2%;
+
+    position: relative;
+    width: 150vh;
+    height: 80vh;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.3) , 0 6px 20px 0 rgba(0,0,0,0.3);
+}
+.signup{
+    position: absolute;
+    width:100% ; 
+    height : 100% ; 
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 20%;
+}
+form {
+   
+    padding-bottom:30%;
+
+}
+.title{
+    font-size: 35px;
+    color: #ff3b2c;
+    padding-bottom: 20px;
+    padding-left: 20%;
+
+}
+
+.input-field{
+    height: 50px;
+    background: #f0f0f0;
+    margin: 10px 0;
+    border : 2px solid #7b7674;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 20%;
+  
+    width:100%;
+
+}
+.input-field input  {
+   flex : 5 ;
+   background: none;
+   border: none;
+   outline: none;
+   width :100%;
+   font-size: 18px;
+   font-weight: 600;
+}
+.signup button {
+    margin-left: 25%;
+}
+
+.img h3{
+    color: #ff3b2c; 
+    font-size: 35px;
+
+}
+.img h4{
+    font-size: 16px;
+    color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.img{
+    padding-left: 5%;
+}
+.img button {
+
+}
+img {
+        width:95%;
+}
+
+.main-button-slider {
+    font-size: 14px;
+    border-radius: 25px;
+    padding: 15px 25px;
+    background-color: #ff3b2c;
+    text-transform: uppercase;
+    color: #fff ; 
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .main-button-slider:hover {
+    background-color:  #7b7674;
+    
+  }
+  
+ .img .main-button-slider{
+    margin-left: 1%;
+ }
+ 
+
+ .img .main-button-slider:hover {
+    color: #fff;}
+  
