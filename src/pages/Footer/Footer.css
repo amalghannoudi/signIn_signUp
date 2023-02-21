@@ -1,0 +1,111 @@
+.info_section {
+    padding-top: 150px;
+    padding-bottom: 1px;
+    color: #fff;
+    background-image: url(/src/images/info-bg.png);
+    background-size: 100% 101%;
+  
+    background-repeat: no-repeat;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .info_section h5 {
+  
+    font-size: 25px;
+  
+  }
+  
+  .info_section a,
+  .info_section a:hover {
+    color: #fff;
+  }
+  
+  .info_logo .logo-box {
+    padding-top: 0;
+    margin-top: -10px;
+  }
+  
+  .info_logo .logo-box img {
+    width: 65px;
+  }
+  
+  .info_logo .logo-box span {
+    color: #fff;
+  }
+  .info_logo .logo-box p {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .info_section .col-md-4 {
+    padding: 0 30px;
+  }
+  
+  .info_news {
+    padding-right: 8%;
+  }
+  
+  .info_news input {
+    border: none;
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    background-color: #fff;
+    outline: none;
+    padding-left: 20px;
+  }
+  
+  .info_news button {
+    border: none;
+    background-color: #78cffd;
+    color: #fff;
+    padding: 7px 12px;
+    margin-top: 10px;
+  }
+  
+  .info_nav nav {
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .info_nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info_nav ul li {
+    list-style-type: none;
+  }
+  
+  .info_nav ul li a {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .info_social {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+  }
+  
+  .info_social a img {
+    width: 30px;
+  }
+  
+  .info-section p{
+    font-size: 1000px;
+  }
+
+  .logo-box {
+    padding-top: 5px;
+  }
+  
+  .logo-box span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+  }
+  .info_section .info_address p{
+    font-size: 20px;
+  }

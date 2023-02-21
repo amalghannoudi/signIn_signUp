@@ -107,7 +107,7 @@ const SignUp = () => {
   <div className="box">
   <Container>
         <Row>
-        <Col xs={6}>
+        <Col lg={6} xs={12}>
 
       <div className="img">
     
@@ -122,7 +122,7 @@ const SignUp = () => {
        </div>
        </Col>
 
-       <Col xs={6}>
+       <Col lg={6} xs={12}>
 
     <div className="signup">
       <form  onSubmit={handleSubmit} >
