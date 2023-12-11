@@ -1,204 +1,228 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
+
+.body5 .nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 10rem;
+  z-index: 1000;
+  text-align: center;
+  height: 5rem;
+
+}
+.body5 .nav .logo {
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  width: 200px;
+  height:98px;
+}
+
+.body5 .nav .ul {
+  list-style: none;
+  padding-right: 5%;
+}
+
+.body5 .nav .li {
+  display: inline;
+  margin: 0 1rem;
+  color: #fff;
+  line-height: 65px;
+  font-size: 1.2rem;
   
-  nav {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    height: 10rem;
-    z-index: 1000;
-    text-align: center;
-  
-  }
-  
-  ul {
-    list-style: none;
-    padding-right: 5%;
-  }
-  
-  li {
-    display: inline;
-    margin: 0 1rem;
+
+}
+.body5 .nav .li a{
+  text-decoration: none;
     color: #fff;
     line-height: 65px;
     font-size: 1.2rem;
-    
-  
+}
+.body5 .nav .li a:hover{
+  color: #fff
+}
+
+.body5 .nav .btn5 {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  width: 50px;
+  display: none;
+}
+
+
+/* Home section */
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../images/fond.jpg);
+  background-position: center top;
+  background-size:cover;
+  overflow: hidden;
+}
+
+.header .overlay {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  li a{
-    text-decoration: none;
-      color: #fff;
-      line-height: 65px;
-      font-size: 1.2rem;
-  }
-  li a:hover{
-    color: #fff
-  }
   
-  /* Home section */
-  
-  .header {
-      width: 100%;
-      height: 100vh;
-      background-image: url(/src/images/fond.jpg);
-      background-position: center top;
-      background-size:cover;
-      overflow: hidden;
+  .header .overlay .subtitle {
+    font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1200 - 320)));
+    font-weight: 400;
+    margin-bottom: 0;
+    letter-spacing: 8px;
+    word-spacing: 10px;
+    text-align: center;
+    opacity: .8;
   }
   
-  .header .overlay {
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      color: #fff;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-    }
-    
-    .header .overlay .subtitle {
-      font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1200 - 320)));
-      font-weight: 400;
-      margin-bottom: 0;
-      letter-spacing: 8px;
-      word-spacing: 10px;
-      text-align: center;
-      opacity: .8;
-    }
-    
-    .header .overlay .title {
-      font-size: calc(30px + (70 - 30) * ((100vw - 320px) / (1200 - 320)));
-      font-weight: bold;
-    }
-    
+  .header .overlay .titre {
+    font-size: calc(30px + (70 - 30) * ((100vw - 320px) / (1200 - 320)));
+    font-weight: bold;
+    color: #EC407A;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+  }
+  
+  .header .shape svg {
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+  }
+  
+  .header .shape svg path {
+    fill: #fff;
+  }
+  
+  @media (max-width: 1199.98px) {
     .header .shape svg {
-      position: absolute;
-      bottom: -28px;
-      left: 0;
-      width: 100%;
-      z-index: 9;
+      bottom: -15px;
     }
-    
-    .header .shape svg path {
-      fill: #fff;
+  }
+  
+  @media (max-width: 767.98px) {
+    .header .shape svg {
+      bottom: 0;
     }
+  }
+  
+  .header.components-header {
+    max-height: 450px !important;
+    height: 450px;
+    background-position: center -140px;
+  }
+  
+  .header.components-header .titre {
+    font-size: calc(40px + (90 - 40) * ((100vw - 320px) / (1200 - 320)));
+    font-weight: bold;
+    margin-top: -8%;
+  }
+  
+  .header.components-header .shape svg path {
+    fill: #f5f8fc;
+  }
+  
+  .header-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    opacity: .8;
+    color: #444;
+  }
+  
+  .header-mini {
+    min-height: 24rem;
+    height: 24rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    background: #ffbca8;
+  }
+
+  .click5 {
+    font-size: 14px;
+    border-radius: 25px;
+    padding: 15px 25px;
+    background-image: linear-gradient(195deg, #EC407A 100%, #D81B60 100%);
+    text-transform: uppercase;
+    color: #fff ; 
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .click5:hover {
+    background-color:  #7b7674;
     
-    @media (max-width: 1199.98px) {
-      .header .shape svg {
-        bottom: -15px;
-      }
+  }
+  @media screen and (max-width: 820px) {
+    
+    
+    
+    .body5 .nav ul{
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(195deg, #42424a 0%, #191919 100%);
+
     }
-    
-    @media (max-width: 767.98px) {
-      .header .shape svg {
-        bottom: 0;
-      }
+    .body5 .nav ul li{
+      margin: 25px 0;
+      font-size: 1.2em;
+      margin-right: 200px;
+
     }
+    .body5 .nav .btn5 {
+      display: block;
+  }
+  
+   
     
-    .header.components-header {
-      max-height: 450px !important;
-      height: 450px;
-      background-position: center -140px;
-    }
-    
-    .header.components-header .title {
-      font-size: calc(40px + (90 - 40) * ((100vw - 320px) / (1200 - 320)));
-      font-weight: bold;
-      margin-top: -8%;
-    }
-    
-    .header.components-header .shape svg path {
-      fill: #f5f8fc;
-    }
-    
-    .header-title {
-      font-size: 2.4rem;
-      font-weight: bold;
-      opacity: .8;
-      color: #444;
-    }
-    
-    .header-mini {
-      min-height: 24rem;
-      height: 24rem;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      text-align: center;
-      padding: 1rem;
-      background: #ffbca8;
-    }
-  
-    .click {
-      font-size: 14px;
-      border-radius: 25px;
-      padding: 15px 25px;
-      background-color: #ff3b2c;
-      text-transform: uppercase;
-      color: #fff ; 
-      border: none;
-      font-weight: 600;
-      letter-spacing: 1px;
-      -webkit-transition: all 0.3s ease 0s;
-      -moz-transition: all 0.3s ease 0s;
-      -o-transition: all 0.3s ease 0s;
-      transition: all 0.3s ease 0s;
-    }
-    
-    .click:hover {
-      background-color:  #7b7674;
-      
-    }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    
-    
+ }

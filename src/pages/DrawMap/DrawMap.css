@@ -1,0 +1,22 @@
+.leaflet-container {
+    height :700px; 
+    width : 100%;
+}
+.nav-item{
+    left : 82%;
+}
+.file-bar {
+    position: absolute;
+    top :34%;
+    z-index: 1000;
+    left : 91%;
+
+}
+.nav-link{
+    font-size: 20px;
+    color: black;
+}
+.alert {
+    z-index: 1000;
+
+}

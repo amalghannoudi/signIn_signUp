@@ -1,29 +1,35 @@
 import React from 'react';
 import './SingIn.css'; 
+import axios from 'axios';
 
 import user from "../../images/svg/user.svg";
 import password from "../../images/svg/lock.svg";
-import facebook from "../../images/svg/facebook.svg";
-import linkedin from "../../images/svg/linkedin.svg";
+import facebook from "../../images/facebook (2).png";
+import linkedin from "../../images/linkedin.png";
 import twitter from "../../images/svg/twitter.svg" ; 
-import google from "../../images/svg/google.svg" ; 
+import google from "../../images/google.png" ; 
 import register from "../../images/register1.png";
 import { Container,Row,Col } from 'react-bootstrap';
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-
+import NavBar1 from '../NavBar1/NavBar1';
+import Footer from '../Footer/Footer';
+import { signIn } from '../../services/cnxService';
 const SingIn = () => {
+
    const navigate=useNavigate();
    const TosignUp=()=>{
     navigate("/signup");
    }
    const [Values,setValues]=useState({
-    userName: '',
+    email: '',
     password: ''
 
    });
+   const [error, setError] = useState(null);
+
    const [errors, setErrors] = useState({
-    userName: '',
+    email: '',
    
     password: ''
   });
@@ -35,13 +41,13 @@ const SingIn = () => {
  
   const handleSubmit = (event) => {
     event.preventDefault();
-    const { userName, password } = Values;
+    const { email, password } = Values;
     
      
     let newErrors = {};
 
-    if (!userName) {
-      newErrors.userName = 'UserName est obligatoire';
+    if (!email) {
+      newErrors.email = 'email est obligatoire';
     }
 
     if (!password) {
@@ -49,83 +55,68 @@ const SingIn = () => {
     }
 
     setErrors(newErrors);
-    
+    signIn(Values)
+    .then((response) => {
+      if (response.success) {
+        if (response.isAdmin) {
+          navigate('/admin');
+        } else {
+          navigate('/map');
+        }
+      } else {
+        setError(response.message);
+        console.log(response.message);
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+    }); 
     
   };
 
-  return (
-    <div className="body">
-      <div className="box">
+  return (<div>
+    <NavBar1 />
+    <body>
 
-      <Container>
-<Row>
+    <div class="container">
+      
+        <div class="form-container sign-in-container">
+            <form className='form'  onSubmit={handleSubmit}>
+            <div className="part1">
 
-<Col xs={6}>
-  <div className="right">
-    <form onSubmit={handleSubmit}>
-      <h2 className="title">Se connecter</h2>
-      <div className="formulaire">
-       <img className="svg" src={user} width="22" height="22"/>
-        <input className="zone" type="text" name="userName"    placeholder="UserName or Mail"
-        value={Values.userName} onChange={handleChange} />
-        {errors.userName && <span>{errors.userName}</span>}
-        <br></br>
-        <br></br>
-
-      </div>
-      <div className="formulaire">
-        <img className="svg" src={password} width="22" height="22" />
-
-        <input className="zone" type="password" name="password"   placeholder="Your password " 
+                <h3>Se connecter</h3>
+                </div>
+              
+                <input className="input" type="text" name="email"    placeholder="Votre mail"
+        value={Values.email} onChange={handleChange} />
+        <br></br>   
+        <input className="input" type="password" name="password"   placeholder="Your password " 
         value={Values.password} onChange={handleChange} />
-        {errors.password && <span>{errors.password}</span>}
-
-      </div>
-      <br></br>
-      <button  type="submit" className="main-button-slider">Sign In </button> 
-      <br></br>
+                <a href="#">Mot de passe oublié?</a>
+                <button class="ghost1">Se connecter</button>
+                <br></br>
+                {error && <div className="error"> {error} </div>}
 
 
-      <p className="social-text">Or Sign in with social platform</p>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+               
+                <div class="overlay-panel overlay-right">
+                    <h3 className='part2'>Rejoindez-nous !</h3>
+                    <img className="image"src={register}  /> 
 
-      <div className="social-media">
-        <a href="#" className="social-icon">    
-               <img  className="icon" src={facebook}  width="20" height="20" />
-        </a>
-        <a href="#" className="social-icon">            
-              <img  src={linkedin}  width="20" height="20" />
-        </a>
-        <a href="#" className="social-icon">          
-               <img src={twitter} width="20" height="20" />
-        </a>
-        <a href="#" className="social-icon">
-          <img src={google} width="20" height="20" />
+                    <p className="para">Si vous n'avez pas un compte ,Veuillez s'inscrire pour nous rejoindre</p>
+                    <button class="ghost" id="signUp" onClick={TosignUp}>S'inscrire</button>
 
-        </a>
-
-      </div>
-    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
-    </Col>
-    <Col xs={6}>
-    <div className="left">
-  <h3>Hello,Friend!</h3>
-  <h4>Si vous n'avez pas un compte ,S'inscrire pour nous rejoindre</h4>
-  <img src={register} height="80%" width="80%"/> 
-  <br></br>
-  <button  type="submit" className="main-button-slider" onClick={TosignUp}>S'inscrire </button> 
-
-
-</div>
-</Col>
-</Row>
-</Container>
-
-</div>
+    </body>
+   <Footer />
     </div>
-
-    
   )
 }
 

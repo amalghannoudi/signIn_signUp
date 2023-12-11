@@ -5,129 +5,94 @@ import fb from '../../images/fb.png'
 import twitter from '../../images/twitter.png'
 import gmail from '../../images/mail.png'
 import linkedin from '../../images/linkedin.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faLinkedin, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
     <div>
-       <section className="info_section ">
-    <div className="container ">
-      <Row  mb={3} pb={4}>
-        <Col md={3} >
-            <div className='info_logo'>
-          <div className="logo-box">
-            <img src="images/logo-white.png" alt=""/>
-            <span>
-              Transportz
-            </span>
-         
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sedconsectetur
-          </p>
-          </div>
-          <div className="info_social">
-            <div>
-              <a href="">
-                <img src={fb} alt=""/>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <img src={twitter} alt=""/>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <img src={gmail} alt=""/>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <img src={linkedin} alt=""/>
-              </a>
+       <section class="info_section layout_padding">
+      <div class="container5">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="info-logo">
+              <h2>
+                GEO TOPO
+              </h2>
+              <p>
+              Découvrez le monde sous un nouvel angle avec notre site de topographie, 
+              où vous pouvez convertir vos fichiers, cartographier les détails du terrain et
+               comprendre les dimensions et
+               les caractéristiques de notre environnement géographique
+              
+              </p>
             </div>
           </div>
-          </div>
-        </Col>
-        <Col md={3} >
-           
-          <h5>
-            Address
-          </h5>
-          <div className='info_address'>
-          <p>
-            Healing Center, 176 W Street name,
-            New York, NY 10014, US
-          </p>
-          <p>
-            (+71) 8522369417
-          </p>
-          <p>
-            (+71) 8522369417
-          </p>
-          <p>
-            <a href="">
-              transportz@gmail.com
-            </a>
-          </p>
-          </div>
-        </Col>
-        <Col md={3} >
-                <div className='info_links'>
-          <div className="info_nav ">
-            <nav className="">
+          <div class="col-md-4">
+            <div class="info-nav">
+              <h4>
+                Navigation
+              </h4>
               <ul>
-                <h5>
-                  Links
-                </h5>
                 <li>
-                  <a href="index.html"> Home</a>
+                  <a href="/">
+                    Home
+                  </a>
                 </li>
                 <li>
-                  <a href="about.html">About</a>
+                  <a href="/#about">
+                    A propos
+                  </a>
                 </li>
                 <li>
-                  <a href="service.html"> Service</a>
+                  <a href="/#about-us">
+                    Mobile
+                  </a>
                 </li>
                 <li>
-                  <a href="shop.html"> Shop</a>
+                  <a href="/#pack">
+                    Packs
+                  </a>
                 </li>
                 <li>
-                  <a href="company.html"> Company</a>
+                    <a href="/signin">
+                      Se connecter
+                    </a>
                 </li>
-                <li>
-                  <a href="contact.html">Contact us</a>
-                </li>
-
+                
               </ul>
-            </nav>
-          </div>
-          </div>
-        </Col>
-        <Col md={3}>
-            <div className='info_news'>
-          <h5>
-            Newsletter
-          </h5>
-          <form action="">
-            <div>
-              <input type="text" placeholder="Your Name"/>
             </div>
-            <div>
-              <input type="email" placeholder="Email"/>
-            </div>
-            <div className="d-flex justify-content-end">
-              <button type="submit">
-                Subscribe
-              </button>
-            </div>
-          </form>
           </div>
-        </Col>
-      </Row>
-
-
+          
+            
+          <div class="col-md-4">
+            <div class="contact">
+              <h4>
+                Nous contacter
+              </h4>
+              <ul>
+                <li>
+                 <p>Email : WeActInfo@gmail.com</p>
+                </li>
+                <li>
+                 <p>Phone : 54 312 461</p>
+                </li>
+                <li>
+                 <p>Adresse : Rue du Palestine, Denden, Manouba </p>
+                </li>
+               
+              </ul>
+              <div className="social-icons-container">
+      <FontAwesomeIcon icon={faFacebook} size="2x" className="social-icon" />
+      <FontAwesomeIcon icon={faLinkedin} size="2x" className="social-icon" />
+      <FontAwesomeIcon icon={faInstagram} size="2x" className="social-icon" />
+      <FontAwesomeIcon icon={faTwitter} size="2x" className="social-icon" />
     </div>
-  </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import React from 'react'
 export const pack = [
     {
       icon: (
@@ -11,11 +12,11 @@ export const pack = [
         </svg>
       ),
       name: "BASIC PLAN",
-      price: "25",
+      price: "30",
       features: [
-        "2 hours of excercises",
-        "Free consultaion to coaches",
-        "Access to The Community",
+        "Chercher une localisation",
+        "Convertir KML en TXT ",
+        "Convertir TXT en KMZ",
       ],
     },
     {
@@ -30,11 +31,11 @@ export const pack = [
         </svg>
       ),
       name: "PREMIUM PLAN",
-      price: "30",
+      price: "70",
       features: [
-        "5 hour of excercises",
-        "Free consultaion of Coaches",
-        "Accessto minibar",
+        "Manipulation des cartes",
+        "Chercher une localisation",
+        "Conversion KML,TXT,KMZ",
       ],
     },
     {
@@ -51,9 +52,9 @@ export const pack = [
       name: "PRO PLAN",
       price: "45",
       features: [
-        "8 hours of excercises",
-        "Consultation of Private Coach",
-        "Free Fitness Merchandises",
+        "Manipulation des cartes",
+        "Chercher Localisation",
+        "Convertir KML en TXT",
       ],
     },
   ];
